@@ -4,5 +4,5 @@
 
 ## 快速开始
 
-* [快速开始](./quickStart/all-in-one.md)
-* [单机环境](./quickStart/all-in-one-vm.md)
+* [快速开始](./quick-start/all-in-one.md)
+* [单机环境](./quick-start/all-in-one-vm.md)
