@@ -1,4 +1,4 @@
-![Open Horizon Logo](assets/open-horizon-logo.png)
+![Open Horizon Logo](book_sources/assets/open-horizon-logo.png)
 
 -------
 
@@ -16,7 +16,7 @@ Open Horizon简化了将如机器学习等应用转移到指定的计算设备�
 - 在设备上自动化免提管理工作负载生命周期
 - 自动将应用程序部署到策略匹配且已协商协议的所有设备上
 
-![Open Horizon Diagram](assets/open-horizon-diagram.png)
+![Open Horizon Diagram](book_sources/assets/open-horizon-diagram.png)
 
 一旦安装并配置了Open Horizon，就可以管理其执行的工作，而无需物理访问设备。例如，您可以购买一包口香糖大小的Raspberry Pi Zero W设备，
 并使其有一天充当离线家庭助理，然后重新分配其任务以监视家庭用电量。或者，您可以让智能相机对准街道，计算一天的行人数量，
