@@ -1,10 +1,10 @@
-## VM环境
+## 单机虚拟环境(VM)搭建
 ### 准备
 
-要在一个虚拟机中运行有关管理中心，代理和CLI的多合一指令，您需要一个具有以下功能的虚拟机：
+要在一个虚拟机中同时运行Open Horizon管理中心(Management Hub)，代理(Agent), 命令工具(CLI)和Intel SDO (Secure Device Onboard)集成版，您需要一个符合以下要求的虚拟机(VM)：
 
-- 大于等于 4GB内存
-- 20GB储存空间
+- 大于等于4GB内存
+- 至少20GB储存空间
 - Ubuntu Server 18.04 LTS
 
 观看安装视频[Video](https://youtu.be/YQqFnRNL98s)
@@ -19,10 +19,11 @@
 - [Open Horizon project](https://www.lfedge.org/projects/openhorizon/)
 
 ### 安装
-
-运行Ubuntu Server 18.04之后，以root身份运行安装：
+要在一个VM里安装所有服务的简单且易于开发的版本，请在Ubuntu 18.04的x86_64计算机上切换为root身份：
 ```bash
 sudo -i
 ```
-
-后续...
+运行以下指令:
+```bash
+curl -sSL https://raw.githubusercontent.com/open-horizon/devops/master/mgmt-hub/deploy-mgmt-hub.sh | bash
+```
