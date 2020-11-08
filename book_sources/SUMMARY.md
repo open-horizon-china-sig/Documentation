@@ -3,6 +3,7 @@
 * [Open Horizon介绍](README.md)
 
 ## 快速开始
+* [快速入门指南](./quick-start/introduction.md)
 * [单机环境](./quick-start/all-in-one-vm.md)
 * [分布式环境](./quick-start/distributed-environment-vm.md)
 
