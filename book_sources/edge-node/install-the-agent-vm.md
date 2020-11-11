@@ -34,7 +34,7 @@ curl -fsSL get.docker.com | sh
 ```
 安装Horizon代理(Agent)和命令工具(CLI):
 ```bash
-curl -fsSL get.docker.com | sh
+~/pkgs$ apt-get install -yqf ~/pkgs/horizon*.deb
 ```
 验证代理是否正在运行：
 ```bash
