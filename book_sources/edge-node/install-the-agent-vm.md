@@ -1,4 +1,4 @@
-## 安装Horizon代理(Agent)
+## 安装Open Horizon代理(Agent)
 
 ### 虚拟机(VM)环境准备
 
@@ -82,4 +82,33 @@ $ hzn node list
 systemctl status horizon.service
 ```
 ###注册代理
-TBD
+以使用helloworld policy为例子
+
+首先获取示例policy的json文件:
+```bash
+wget https://raw.githubusercontent.com/open-horizon/examples/master/edge/services/helloworld/horizon/node.policy.json
+```
+
+注册agent所需修改的配置信息都在`/etc/default/horizon`里。需要配置的有`HZN_EXCHANGE_URL`，`HZN_FSS_CSSURL`，`HZN_DEVICE_ID`，
+虽然`HZN_AGENT_PORT=8510`为默认配置，但可以自行依据需求修改。在修改配置前可以通过`http://<YOUR MGMT HUB IP>:3090/v1`测试是否能正常访问exchange以免因防火墙等问题
+导致无法将agent注册到mgmt hub。
+```bash
+HZN_EXCHANGE_URL=http://<YOUR MGMT HUB IP>:3090/v1 (exchange service default port is 3090)
+HZN_FSS_CSSURL=http://<YOUR MGMT HUB IP>:9443/ (FSS_CSS service default port is 9443)
+HZN_MGMT_HUB_CERT_PATH=
+HZN_DEVICE_ID=node100
+HZN_AGENT_PORT=8510
+```
+
+保存agent配制后重启agent服务:
+```bash
+sudo systemctl restart horizon.service
+```
+使用`hzn register`命令注册agent,有关此命令的详细使用和相关参数可以通过`hzn register --help`查看。
+```bash
+Demo:
+hzn register -o myorg -u "admin:QxnPaBtN9yTvbW1SbhttSlBBRUXkek" -n "node100:dHFkIE9CObNRczbjSBx4YGj5hKAGk3" --policy node.policy.json -s ibm.helloworld --serviceorg IBM -t 100
+
+Template:
+$HZN register -o $EXCHANGE_USER_ORG -u "admin:$EXCHANGE_USER_ADMIN_PW" -n "$HZN_DEVICE_ID:$HZN_DEVICE_TOKEN" --policy node.policy.json -s ibm.helloworld --serviceorg $EXCHANGE_SYSTEM_ORG -t 100
+```
