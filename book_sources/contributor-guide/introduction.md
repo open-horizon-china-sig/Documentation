@@ -1,5 +1,5 @@
 ##参与告知
-欢迎加入OPen Horizon开源社区
+欢迎加入Open Horizon开源社区
 
 ###项目github地址
 - [Open Horizon 子项目总览](https://github.com/open-horizon)
