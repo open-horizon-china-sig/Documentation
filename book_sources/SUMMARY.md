@@ -17,16 +17,12 @@
 * [K8S搭建边缘节点集群](./quick-start/k8s-node-cluster.md)
 
 ## 管理中心
-* [介绍](./management-hub/introduction.md)
 * [Exchange组件](./management-hub/exchange.md)
 * [Agbot组件](./management-hub/agbot.md)
 * [Switchboard组件](./management-hub/switchboard.md)
-* [CSS组件](./management-hub/CSS.md)
 
 ## 边缘节点
-* [介绍](./edge-node/introduction.md)
 * [Horizon Agent](./edge-node/agent.md)
-* [ESS组件](./edge-node/ESS.md)
 * [安装代理 (虚拟环境)](./edge-node/install-the-agent-vm.md)
 * [安装代理 (边缘设备)](./edge-node/install-the-agent-device.md)
 
